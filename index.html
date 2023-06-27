@@ -25,13 +25,8 @@
 		</div>
 	</div>
 	<div id="header">
-	
+
 		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<!--<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg" class="d-block w-100" alt="...">-->
@@ -75,6 +70,11 @@
 						alt="Photo de mariage d'Edward Cisneros"
 					>
 				</div>
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" ></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Previous</span>
@@ -84,6 +84,9 @@
 					<span class="visually-hidden">Next</span>
 				</button>
 			</div>
+		</div>
+	</div>
+
 
 	<div id="about">
 		<div class="picture left">
@@ -112,13 +115,21 @@
 	
 	<div id="gallery">
 		<h2 class="title">Portfolio</h2>
+		<div class="categories">
+			<button class="all">Tous</button>
+			<button class="Concert">Concerts</button>
+			<button class="Entreprises">Entreprises</button>
+			<button class="Mariages">Mariages</button>
+			<button class="Portraits">Portraits</button>
+		  </div>
 		<div class="container py-3">
-			<div class="gallery" style="display: none">
-				<!--<img data-gallery-tag="Concert" class="gallery-item lazyload" data-src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Photo de concert de Aaron Paul"/>-->
+			<div class="gallery " style="display: none">
+				<!--<img data-gallery-tag="Concert" class="gallery-item column lazyload" data-src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Photo de concert de Aaron Paul"/>-->
+
 				<img 
 					data-gallery-tag="Concert"
-					width="514"
 					src="./assets/images/gallery/concerts/xxl/aaron-paul-wnX-fXzB6Cw-unsplash-514-xxl-514x685.webp"
+
 					srcset="
 						./assets/images/gallery/concerts/large/aaron-paul-wnX-fXzB6Cw-unsplash-large-465x620.webp 1000w,
 						./assets/images/gallery/concerts/medium/aaron-paul-wnX-fXzB6Cw-unsplash-large-465x620.webp 640w,
@@ -126,29 +137,31 @@
 					"
 					loading="lazy"
 					decoding="async"
-					class="gallery-item"	
+					class="gallery-item column "	
  					alt="Photo de concert de Aaron Paul"
 				>
-				<!--<img data-gallery-tag="Entreprises" class="gallery-item " data-src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="photo d'entreprise d'Ali Morshedlou"/>-->
+				<!--<img data-gallery-tag="Entreprises" class="gallery-item column " data-src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="photo d'entreprise d'Ali Morshedlou"/>-->
+
 				<img 
 					data-gallery-tag="Entreprises"
-					width="520"
-					src="./assets/images/gallery/entreprise/xxl/ali-morshedlou-WMD64tMfc4k-unsplash-xxl-520x780.webp"
+					src="./assets/images/gallery/entreprise/xxl/ali-morshedlou-WMD64tMfc4k-unsplash-xxl-520x780.webp" 
+
 					srcset="
 						./assets/images/gallery/entreprise/large/ali-morshedlou-WMD64tMfc4k-unsplash-large-medium-480x720.webp 1000w,
-						./assets/images/gallery/large/ali-morshedlou-WMD64tMfc4k-unsplash-large-medium-480x720.webp 640w,
-						./assets/images/gallery/small/ali-morshedlou-WMD64tMfc4k-unsplash-small-320x480.webp 320w
+						./assets/images/gallery/entreprise/medium/ali-morshedlou-WMD64tMfc4k-unsplash-large-medium-480x720.webp 640w,
+						./assets/images/gallery/entreprise/small/ali-morshedlou-WMD64tMfc4k-unsplash-small-320x480.webp 320w
 					"
 					loading="lazy"
 					decoding="async"
-					class="gallery-item"	
+					class="gallery-item column "	
 					 alt="photo d'entreprise d'Ali Morshedlou"
 				>
-				<!--<img data-gallery-tag="Entreprises" class="gallery-item " data-src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" alt="Photo d'entreprise de Jason Goodman"/>-->
+
+				<!--<img data-gallery-tag="Entreprises" class="gallery-item column " data-src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" alt="Photo d'entreprise de Jason Goodman"/>-->
 				<img 
 					data-gallery-tag="Entreprises"
-					width="531"
 					src="./assets/images/gallery/entreprise/xxl/jason-goodman-tHO1_OuKbg0-unsplash-xxl-531x359.webp"
+
 					srcset="
 						./assets/images/gallery/entreprise/large/jason-goodman-tHO1_OuKbg0-unsplash-large-medium-490x332.webp 1000w,
 						./assets/images/gallery/entreprise/large/jason-goodman-tHO1_OuKbg0-unsplash-large-medium-490x332.webp 640w,
@@ -156,14 +169,14 @@
 					"
 					loading="lazy"
 					decoding="async"
-					class="gallery-item"	
+					class="gallery-item column "	
 					 alt="Photo d'entreprise de Jason Goodman"
 				>
-				<!--<img data-gallery-tag="Mariages" class="gallery-item " data-src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" alt="Photo de mariage de Hannah Busing"/>-->
+				<!--<img data-gallery-tag="Mariages" class="gallery-item column " data-src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" alt="Photo de mariage de Hannah Busing"/>-->
 				<img 
-					width="534"
 					data-gallery-tag="Mariages"
 					src="./assets/images/gallery/mariage/xxl/hannah-busing-RvF2R_qMpRk-unsplash-xxl-534x427.webp"
+
 					srcset="
 						./assets/images/gallery/mariage/large/hannah-busing-RvF2R_qMpRk-unsplash-large-medium-490x392.webp 1000w,
 						./assets/images/gallery/mariage/medium/hannah-busing-RvF2R_qMpRk-unsplash-large-medium-490x392.webp 640w,
@@ -171,14 +184,14 @@
 					"
 					loading="lazy"
 					decoding="async"
-					class="gallery-item"	
+					class="gallery-item column "	
 					 alt="Photo de mariage de Hannah Busing"
 				>
-				<!--<img data-gallery-tag="Portrait" class="gallery-item " data-src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" alt="Portrait d'Ade Tunji"/>-->
+				<!--<img data-gallery-tag="Portrait" class="gallery-item column " data-src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" alt="Portrait d'Ade Tunji"/>-->
 				<img 
-					width="509"
-					data-gallery-tag="Portait"
+					data-gallery-tag="Portrait"
 					src="./assets/images/gallery/portraits/xxl/ade-tunji-rVkhWWZFAtQ-unsplash-xxl-509x763.webp"
+
 					srcset="
 						./assets/images/gallery/portraits/large/ade-tunji-rVkhWWZFAtQ-unsplash-large-medium-486x728.webp 1000w,
 						./assets/images/gallery/portraits/medium/ade-tunji-rVkhWWZFAtQ-unsplash-large-medium-486x728.webp 640w,
@@ -186,14 +199,14 @@
 					"
 					loading="lazy"
 					decoding="async"
-					class="gallery-item"	
+					class="gallery-item column "	
 					 alt="Portrait d'Ade Tunji"
 				>
-				<!--<img data-gallery-tag="Mariages" class="gallery-item " data-src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" alt="photo de mariage de Jakob Owens"/>-->
+				<!--<img data-gallery-tag="Mariages" class="gallery-item column " data-src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" alt="photo de mariage de Jakob Owens"/>-->
 				<img 
-					width="538"
 					data-gallery-tag="Mariages"
 					src="./assets/images/gallery/mariage/xxl/jakob-owens-SiniLJkXhMc-unsplash-xxl-538x807.webp"
+
 					srcset="
 							./assets/images/gallery/mariage/large/jakob-owens-SiniLJkXhMc-unsplash-large-medium-493x740.webp 1000w,
 							./assets/images/gallery/mariage/medium/jakob-owens-SiniLJkXhMc-unsplash-large-medium-493x740.webp 640w,
@@ -201,14 +214,14 @@
 					"
 					loading="lazy"
 					decoding="async"
-					class="gallery-item"	
+					class="gallery-item column "	
 					 alt="Photo de mariage de Jakob Owens"
 				>
-				<!--<img data-gallery-tag="Portrait" class="gallery-item " data-src="./assets/images/gallery/portraits/nino-van-prattenburg-443cl1uR_8-unsplash.jpg" alt="Portait de Nino Van Prattenburg"/>-->
+				<!--<img data-gallery-tag="Portrait" class="gallery-item column " data-src="./assets/images/gallery/portraits/nino-van-prattenburg-443cl1uR_8-unsplash.jpg" alt="Portait de Nino Van Prattenburg"/>-->
 				<img 
-					width="563"
-					data-gallery-tag="Portait"
+					data-gallery-tag="Portrait"
 					src="./assets/images/gallery/portraits/xxl/nino-van-prattenburg--443cl1uR_8-unsplash-xxl-563x846.webp"
+
 					srcset="
 						./assets/images/gallery/portraits/large/nino-van-prattenburg--443cl1uR_8-unsplash-large-medium-483x726.webp 1000w,
 						./assets/images/gallery/portraits/medium/nino-van-prattenburg--443cl1uR_8-unsplash-large-medium-483x726.webp 640w,
@@ -216,14 +229,14 @@
 					"
 					loading="lazy"
 					decoding="async"
-					class="gallery-item"	
+					class="gallery-item column"	
 					 alt="Portait de Nino Van Prattenburg"
 				>
-				<!--<img data-gallery-tag="Concert" class="gallery-item " data-src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="Photo de concert d'Austin Neill"/>-->
+				<!--<img data-gallery-tag="Concert" class="gallery-item column " data-src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="Photo de concert d'Austin Neill"/>-->
 				<img 
-					width="523"
 					data-gallery-tag="Concert"
 					src="./assets/images/gallery/concerts/xxl/austin-neill-hgO1wFPXl3I-unsplash-xxl-523x349.webp"
+
 					srcset="
 							./assets/images/gallery/concerts/large/austin-neill-hgO1wFPXl3I-unsplash-large-medium-471x314.webp 1000w,
 							./assets/images/gallery/concerts/medium/austin-neill-hgO1wFPXl3I-unsplash-large-medium-471x314.webp 640w,
@@ -231,14 +244,14 @@
 					"
 					loading="lazy"
 					decoding="async"
-					class="gallery-item"	
+					class="gallery-item column"	
 					 alt="Photo de concert d'Austin Neill"
 				>
-				<!--<img data-gallery-tag="Entreprises" class="gallery-item " data-src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" alt="Photo d'entreprise de Mateus Campos Felipe"/>-->
+				<!--<img data-gallery-tag="Entreprises" class="gallery-item column " data-src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" alt="Photo d'entreprise de Mateus Campos Felipe"/>-->
 				<img 
-					width="540"
 					data-gallery-tag="Entreprises"
 					src="./assets/images/gallery/entreprise/xxl/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-xxl-540x331.webp"
+
 					srcset="
 						./assets/images/gallery/entreprise/large/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-large-medium-480x294.webp 1000w,
 						./assets/images/gallery/entreprise/large/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-large-medium-480x294.webp 640w,
@@ -246,11 +259,22 @@
 					"
 					loading="lazy"
 					decoding="async"
-					class="gallery-item"	
+					class="gallery-item column"	
 					 alt="Photo d'entreprise de Mateus Campos Felipe"
 				>
 			</div>
 		</div>
+		<div id="modal" class="modal">
+			<span class="close">&times;</span>
+			<div class="flex-modal">
+			  <button id="prevButton">&lt;</button>
+			  <img id="modal-image" class="modal-content" alt="Photo en grand" />
+			  <button id="nextButton">&gt;</button>
+			</div>
+			<div id="caption" class="caption"></div>
+		</div>
+
+		  
 		<div class="quote">
 			<figure>
 				<blockquote>
@@ -261,7 +285,7 @@
 		</div>
 	</div>
 	<div id="services">
-		<h3 class="title">Mes services</h3>
+		<h4 class="title">Mes services</h4>
 		<div class="container">
 			<div class="service">
 				<div class="service__description">
@@ -337,9 +361,11 @@
 			</div>
 		</div>
 	</div>
-	<script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!--<script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script defer src="./assets/bootstrap/bootstrap.bundle.js"></script>	
 	<script defer src="./assets/maugallery.js"></script>
-	<script defer src="./assets/scripts.js"></script>
+	<script defer src="./assets/scripts.js"></script>-->
+	<script src="./assets/gallery.js"></script>
+
 </body>
 </html>
