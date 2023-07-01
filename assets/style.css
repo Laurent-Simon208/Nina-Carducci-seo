@@ -341,5 +341,22 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
-
-
+.contact-snippet {
+	background-color: #D8D3A8;
+	text-align: center;
+  }
+  
+  .contact-snippet ul {
+	list-style-type: none;
+	padding: 0;
+  }
+  
+  h5 {
+	margin: 0 0 15px 0;
+  }
+  
+  .contact-snippet li {
+	text-align: center;
+	display: inline-block; 
+	margin: 0 5px; 
+  }
