@@ -9,7 +9,7 @@
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h4, #about-me p {
+	#about-me h3, #about-me p {
 		width: 100%;
 	}
 }
@@ -33,6 +33,10 @@
 	.about-me__title{
 		text-align: center;
 		margin-top: 1em;
+	}
+	.about-me__introduction{
+		width: 100%;
+
 	}
 	#services .container {
 		flex-direction: column;
