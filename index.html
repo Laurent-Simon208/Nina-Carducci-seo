@@ -2,16 +2,37 @@
 <html lang="fr">
 <head>
 	<title>Site photographie de Nina Carducci</title>
-	<meta name="description" content="Site de la photographe Nina Carducci qui vous expose son travail." />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="./assets/style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
 	<meta charset="UTF-8">
+	<meta name="description" content="Devenir photographe était pour moi une évidence. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer." />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Open Graph data -->
+	<meta property="og:title" content="Nina Carducci : Photographe"/>
+	<meta property="og:type" content="website"/>
+	<!--<meta property="og:url" content="http://www.example.com/"/>
+	<meta property="og:image" content="http://example.com/image.jpg"/>-->
+	<meta property="og:description" content="Site de la photographe Nina Carducci"/>
+
+	<!-- Twitter Card data 
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@publisher_handle">-->
+	<meta name="twitter:title" content="Nina Carducci : Photographe">
+	<meta name="twitter:description" content="Site de la photographe Nina Carducci">
+	<!--<meta name="twitter:creator" content="@author_handle">
+	 Twitter Summary card images must be at least 200x200px 
+	<meta name="twitter:image" content="http://www.example.com/image.jpg">-->
+
+	<link rel="stylesheet" href="./assets/style.min.css">
+	<link rel="stylesheet" href="./assets/media-style.min.css">
+	<link rel="stylesheet" href="./assets/boot.min.css">
+
+	<link rel="preconnect" defer href="https://fonts.googleapis.com">
+	<link rel="preconnect" defer href="https://fonts.gstatic.com" crossorigin>
+	<link defer href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+	
 </head>
 <body>
+	<header>
 	<div class="top-header">
 		<h1 class="name">Nina Carducci</h1>
 		<div class="nav">   
@@ -24,20 +45,23 @@
 			</ul>
 		</div>
 	</div>
+</header>
+<nav>
 	<div id="header">
-
 		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<!--<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg" class="d-block w-100" alt="...">-->
 					<img 
 						width="1544"
-						src="./assets/images/slider/xxl/ryoji-iwata-wUZjnOv7t0g-unsplash-xxl-1544x714.webp"
+						height="714px"
+						src="./assets/images/slider/xxl/ryoji-iwata-wUZjnOv7t0g-unsplash-xxl-1544x714.jpg"
 						srcset="
-							./assets/images/slider/large/ryoji-iwata-wUZjnOv7t0g-unsplash-large-99x462.webp 1000w ,
-							./assets/images/slider/medium/ryoji-iwata-wUZjnOv7t0g-unsplash-medium-636x294.webp 640w,
-							./assets/images/slider/small/ryoji-iwata-wUZjnOv7t0g-unsplash-small363x168.webp 320w
+							./assets/images/slider/large/ryoji-iwata-wUZjnOv7t0g-unsplash-large-99x462.jpg 999w ,
+							./assets/images/slider/medium/ryoji-iwata-wUZjnOv7t0g-unsplash-medium-636x294.jpg 636w,
+							./assets/images/slider/small/ryoji-iwata-wUZjnOv7t0g-unsplash-small363x168.jpg 363w
 						"
+						sizes="100 vw"
 						class="d-block w-100"
 						alt="Photo de Ryoji Iwata qui traverse la route"
 					>
@@ -45,13 +69,15 @@
 				<div class="carousel-item">
 					<!--<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg" class="d-block w-100" alt="...">-->
 					<img 
-						width="1560"
-						src="./assets/images/slider/xxl/nicholas-green-nPz8akkUmDI-unsplash-xxl-1560x722.webp"
+						width="1560px"
+						height="722px"
+						src="./assets/images/slider/xxl/nicholas-green-nPz8akkUmDI-unsplash-xxl-1560x722.jpg"
 						srcset="
-							./assets/images/slider/large/nicholas-green-nPz8akkUmDI-unsplash-large-1020x472.webp 1000w ,
-							./assets/images/slider/medium/nicholas-green-nPz8akkUmDI-unsplash-medium-660x305.webp 640w,
-							./assets/images/slider/small/nicholas-green-nPz8akkUmDI-unsplash-small-360x167.webp 320w
+						./assets/images/slider/large/nicholas-green-nPz8akkUmDI-unsplash-large-1020x472.jpg 1020w,
+						./assets/images/slider/medium/nicholas-green-nPz8akkUmDI-unsplash-medium-660x305.jpg 660w,
+						./assets/images/slider/small/nicholas-green-nPz8akkUmDI-unsplash-small-360x167.jpg  360w
 						"
+						sizes="100 vw"
 						class="d-block w-100"
 						alt="Photo de Nicholas Green pendant un concert"
 					>
@@ -59,13 +85,15 @@
 				<div class="carousel-item">
 					<!--<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg" class="d-block w-100" alt="...">-->
 					<img 
-						width="1526"
-						src="./assets/images/slider/xxl/edward-cisneros-3_h6-1NPDGw-unsplash-xxl-1526x705.webp"
+						width="1526px"
+						height="705px"
+						src="./assets/images/slider/xxl/edward-cisneros-3_h6-1NPDGw-unsplash-xxl-1526x705.jpg"
 						srcset="
-							./assets/images/slider/large/edward-cisneros-3_h6-1NPDGw-unsplash-large-1018x471.webp 1000w ,
-							./assets/images/slider/medium/edward-cisneros-3_h6-1NPDGw-unsplash-medium-678x313.webp 640w,
-							./assets/images/slider/small/edward-cisneros-3_h6-1NPDGw-unsplash-small-339x157.webp 320w
+						./assets/images/slider/large/edward-cisneros-3_h6-1NPDGw-unsplash-large-1018x471.jpg 1018w,
+						./assets/images/slider/medium/edward-cisneros-3_h6-1NPDGw-unsplash-medium-678x313.jpg 678w,
+						./assets/images/slider/small/edward-cisneros-3_h6-1NPDGw-unsplash-small-339x157.jpg 339w
 						"
+						sizes="100 vw"
 						class="d-block w-100"
 						alt="Photo de mariage d'Edward Cisneros"
 					>
@@ -86,28 +114,28 @@
 			</div>
 		</div>
 	</div>
-
-
+    </nav>
+	<main>
 	<div id="about">
 		<div class="picture left">
 			<!--<img src="./assets/images/nina.png">-->
 			<img 
-
-				width="438"
-				src="./assets/images/hors-galery/xxl/nina-xxl-438x437.webp"
+				src="./assets/images/hors-galery/xxl/nina-xxl-438x437.jpg"
 				srcset="
-					./assets/images/hors-galery/large/nina-large-394x393.webp 1000w,
-					./assets/images/hors-galery/medium/nina-medium-453x452.webp 640w,
-					./assets/images/hors-galery/small/nina-small-204x203.webp 320w
+					./assets/images/hors-galery/large/nina-large-394x393.jpg 394w,
+					./assets/images/hors-galery/small/nina-small-204x203.jpg  204w
 				"
+				width="438px"
+				height="437px"
+				sizes="100 vw"
 				loading="lazy"
 				decoding="async"
 				 alt="Portait de Nina Carducci"
 			>
 		</div>
 		<div id="about-me">
-			<h3 class="about-me__title">A propos de moi</h3>
-				<h4 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h4>
+			<h2 class="about-me__title">A propos de moi</h2>
+				<h3 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
 					<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 					C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 		</div>
@@ -124,17 +152,19 @@
 		  </div>
 		<div class="container py-3">
 			<div class="gallery " style="display: none">
-				<!--<img data-gallery-tag="Concert" class="gallery-item column lazyload" data-src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Photo de concert de Aaron Paul"/>-->
+				<!--<img data-gallery-tag="Concert" class="gallery-item column lazyload" data-src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" alt="Photo de concert de Aaron Paul"/>-->
 
 				<img 
 					data-gallery-tag="Concert"
-					src="./assets/images/gallery/concerts/xxl/aaron-paul-wnX-fXzB6Cw-unsplash-514-xxl-514x685.webp"
+					src="./assets/images/gallery/concerts/xxl/aaron-paul-wnX-fXzB6Cw-unsplash-514-xxl-514x685.jpg"
+					width="514px"
+					height="685px"
 
 					srcset="
-						./assets/images/gallery/concerts/large/aaron-paul-wnX-fXzB6Cw-unsplash-large-465x620.webp 1000w,
-						./assets/images/gallery/concerts/medium/aaron-paul-wnX-fXzB6Cw-unsplash-large-465x620.webp 640w,
-						./assets/images/gallery/concerts/small/aaron-paul-wnX-fXzB6Cw-unsplash-small-343x457.webp 320w
+						./assets/images/gallery/concerts/large/aaron-paul-wnX-fXzB6Cw-unsplash-large-465x620.jpg 465w,
+						./assets/images/gallery/concerts/small/aaron-paul-wnX-fXzB6Cw-unsplash-small-343x457.jpg 343w
 					"
+					sizes="100vw"
 					loading="lazy"
 					decoding="async"
 					class="gallery-item column "	
@@ -144,13 +174,14 @@
 
 				<img 
 					data-gallery-tag="Entreprises"
-					src="./assets/images/gallery/entreprise/xxl/ali-morshedlou-WMD64tMfc4k-unsplash-xxl-520x780.webp" 
-
+					width="520px"
+					height="780px"
+					src="./assets/images/gallery/entreprise/xxl/ali-morshedlou-WMD64tMfc4k-unsplash-xxl-520x780.jpg" 
 					srcset="
-						./assets/images/gallery/entreprise/large/ali-morshedlou-WMD64tMfc4k-unsplash-large-medium-480x720.webp 1000w,
-						./assets/images/gallery/entreprise/medium/ali-morshedlou-WMD64tMfc4k-unsplash-large-medium-480x720.webp 640w,
-						./assets/images/gallery/entreprise/small/ali-morshedlou-WMD64tMfc4k-unsplash-small-320x480.webp 320w
+						./assets/images/gallery/entreprise/large/ali-morshedlou-WMD64tMfc4k-unsplash-large-medium-480x720.jpg 480w,
+						./assets/images/gallery/entreprise/small/ali-morshedlou-WMD64tMfc4k-unsplash-small-320x480.jpg 320w
 					"
+					sizes="100 vw"
 					loading="lazy"
 					decoding="async"
 					class="gallery-item column "	
@@ -160,13 +191,14 @@
 				<!--<img data-gallery-tag="Entreprises" class="gallery-item column " data-src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" alt="Photo d'entreprise de Jason Goodman"/>-->
 				<img 
 					data-gallery-tag="Entreprises"
-					src="./assets/images/gallery/entreprise/xxl/jason-goodman-tHO1_OuKbg0-unsplash-xxl-531x359.webp"
-
+					src="./assets/images/gallery/entreprise/xxl/jason-goodman-tHO1_OuKbg0-unsplash-xxl-531x359.jpg"
+					width="531px"
+					height="359px"
 					srcset="
-						./assets/images/gallery/entreprise/large/jason-goodman-tHO1_OuKbg0-unsplash-large-medium-490x332.webp 1000w,
-						./assets/images/gallery/entreprise/large/jason-goodman-tHO1_OuKbg0-unsplash-large-medium-490x332.webp 640w,
-						./assets/images/gallery/entreprise/small/jason-goodman-tHO1_OuKbg0-unsplash-small-327x221.webp 320w
+						./assets/images/gallery/entreprise/large/jason-goodman-tHO1_OuKbg0-unsplash-large-medium-490x332.jpg 490w,
+						./assets/images/gallery/entreprise/small/jason-goodman-tHO1_OuKbg0-unsplash-small-327x221.jpg 320w
 					"
+					sizes="100 vw"
 					loading="lazy"
 					decoding="async"
 					class="gallery-item column "	
@@ -175,13 +207,14 @@
 				<!--<img data-gallery-tag="Mariages" class="gallery-item column " data-src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" alt="Photo de mariage de Hannah Busing"/>-->
 				<img 
 					data-gallery-tag="Mariages"
-					src="./assets/images/gallery/mariage/xxl/hannah-busing-RvF2R_qMpRk-unsplash-xxl-534x427.webp"
-
+					src="./assets/images/gallery/mariage/xxl/hannah-busing-RvF2R_qMpRk-unsplash-xxl-534x427.jpg"
+					width="534px"
+					height="427px"
 					srcset="
-						./assets/images/gallery/mariage/large/hannah-busing-RvF2R_qMpRk-unsplash-large-medium-490x392.webp 1000w,
-						./assets/images/gallery/mariage/medium/hannah-busing-RvF2R_qMpRk-unsplash-large-medium-490x392.webp 640w,
-						./assets/images/gallery/mariage/small/hannah-busing-RvF2R_qMpRk-unsplash-small-356x285.webp 320w
+						./assets/images/gallery/mariage/large/hannah-busing-RvF2R_qMpRk-unsplash-large-medium-490x392.jpg 490w,
+						./assets/images/gallery/mariage/small/hannah-busing-RvF2R_qMpRk-unsplash-small-356x285.jpg 356w
 					"
+					sizes="100 vw"
 					loading="lazy"
 					decoding="async"
 					class="gallery-item column "	
@@ -190,13 +223,14 @@
 				<!--<img data-gallery-tag="Portrait" class="gallery-item column " data-src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" alt="Portrait d'Ade Tunji"/>-->
 				<img 
 					data-gallery-tag="Portrait"
-					src="./assets/images/gallery/portraits/xxl/ade-tunji-rVkhWWZFAtQ-unsplash-xxl-509x763.webp"
-
+					src="./assets/images/gallery/portraits/xxl/ade-tunji-rVkhWWZFAtQ-unsplash-xxl-509x763.jpg"
+					width="509px"
+					height="763px"
 					srcset="
-						./assets/images/gallery/portraits/large/ade-tunji-rVkhWWZFAtQ-unsplash-large-medium-486x728.webp 1000w,
-						./assets/images/gallery/portraits/medium/ade-tunji-rVkhWWZFAtQ-unsplash-large-medium-486x728.webp 640w,
-						./assets/images/gallery/portraits/small/ade-tunji-rVkhWWZFAtQ-unsplash-small-332x498.webp 320w
+						./assets/images/gallery/portraits/large/ade-tunji-rVkhWWZFAtQ-unsplash-large-medium-486x728.jpg 486w,
+						./assets/images/gallery/portraits/small/ade-tunji-rVkhWWZFAtQ-unsplash-small-332x498.jpg 332w
 					"
+					sizes="100 vw"
 					loading="lazy"
 					decoding="async"
 					class="gallery-item column "	
@@ -205,13 +239,14 @@
 				<!--<img data-gallery-tag="Mariages" class="gallery-item column " data-src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" alt="photo de mariage de Jakob Owens"/>-->
 				<img 
 					data-gallery-tag="Mariages"
-					src="./assets/images/gallery/mariage/xxl/jakob-owens-SiniLJkXhMc-unsplash-xxl-538x807.webp"
-
+					src="./assets/images/gallery/mariage/xxl/jakob-owens-SiniLJkXhMc-unsplash-xxl-538x807.jpg"
+					width="538px"
+					height="807px"
 					srcset="
-							./assets/images/gallery/mariage/large/jakob-owens-SiniLJkXhMc-unsplash-large-medium-493x740.webp 1000w,
-							./assets/images/gallery/mariage/medium/jakob-owens-SiniLJkXhMc-unsplash-large-medium-493x740.webp 640w,
-							./assets/images/gallery/mariage/small/jakob-owens-SiniLJkXhMc-unsplash-small-358x537.webp 320w
+							./assets/images/gallery/mariage/large/jakob-owens-SiniLJkXhMc-unsplash-large-medium-493x740.jpg 493w,
+							./assets/images/gallery/mariage/small/jakob-owens-SiniLJkXhMc-unsplash-small-358x537.jpg 358w
 					"
+					sizes="100 vw"
 					loading="lazy"
 					decoding="async"
 					class="gallery-item column "	
@@ -220,13 +255,14 @@
 				<!--<img data-gallery-tag="Portrait" class="gallery-item column " data-src="./assets/images/gallery/portraits/nino-van-prattenburg-443cl1uR_8-unsplash.jpg" alt="Portait de Nino Van Prattenburg"/>-->
 				<img 
 					data-gallery-tag="Portrait"
-					src="./assets/images/gallery/portraits/xxl/nino-van-prattenburg--443cl1uR_8-unsplash-xxl-563x846.webp"
-
+					src="./assets/images/gallery/portraits/xxl/nino-van-prattenburg--443cl1uR_8-unsplash-xxl-563x846.jpg"
+					width="563px"
+					height="846px"
 					srcset="
-						./assets/images/gallery/portraits/large/nino-van-prattenburg--443cl1uR_8-unsplash-large-medium-483x726.webp 1000w,
-						./assets/images/gallery/portraits/medium/nino-van-prattenburg--443cl1uR_8-unsplash-large-medium-483x726.webp 640w,
-						./assets/images/gallery/portraits/small/nino-van-prattenburg--443cl1uR_8-unsplash-small-322x484.webp 320w
+						./assets/images/gallery/portraits/large/nino-van-prattenburg--443cl1uR_8-unsplash-large-medium-483x726.jpg 483w,
+						./assets/images/gallery/portraits/small/nino-van-prattenburg--443cl1uR_8-unsplash-small-322x484.jpg 320w
 					"
+					sizes="100 vw"
 					loading="lazy"
 					decoding="async"
 					class="gallery-item column"	
@@ -235,13 +271,14 @@
 				<!--<img data-gallery-tag="Concert" class="gallery-item column " data-src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="Photo de concert d'Austin Neill"/>-->
 				<img 
 					data-gallery-tag="Concert"
-					src="./assets/images/gallery/concerts/xxl/austin-neill-hgO1wFPXl3I-unsplash-xxl-523x349.webp"
-
+					src="./assets/images/gallery/concerts/xxl/austin-neill-hgO1wFPXl3I-unsplash-xxl-523x349.jpg"
+					width="523px"
+					height="349px"
 					srcset="
-							./assets/images/gallery/concerts/large/austin-neill-hgO1wFPXl3I-unsplash-large-medium-471x314.webp 1000w,
-							./assets/images/gallery/concerts/medium/austin-neill-hgO1wFPXl3I-unsplash-large-medium-471x314.webp 640w,
-							./assets/images/gallery/concerts/small/austin-neill-hgO1wFPXl3I-unsplash-small-366x244.webp 320w
+							./assets/images/gallery/concerts/large/austin-neill-hgO1wFPXl3I-unsplash-large-medium-471x314.jpg 471w,
+							./assets/images/gallery/concerts/small/austin-neill-hgO1wFPXl3I-unsplash-small-366x244.jpg 366w
 					"
+					sizes="100 vw"
 					loading="lazy"
 					decoding="async"
 					class="gallery-item column"	
@@ -250,13 +287,14 @@
 				<!--<img data-gallery-tag="Entreprises" class="gallery-item column " data-src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" alt="Photo d'entreprise de Mateus Campos Felipe"/>-->
 				<img 
 					data-gallery-tag="Entreprises"
-					src="./assets/images/gallery/entreprise/xxl/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-xxl-540x331.webp"
-
+					src="./assets/images/gallery/entreprise/xxl/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-xxl-540x331.jpg"
+					width="540px"
+					height="331px"
 					srcset="
-						./assets/images/gallery/entreprise/large/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-large-medium-480x294.webp 1000w,
-						./assets/images/gallery/entreprise/large/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-large-medium-480x294.webp 640w,
-						./assets/images/gallery/entreprise/small/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-small-360x220.webp 320w
+						./assets/images/gallery/entreprise/large/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-large-medium-480x294.jpg 480w,
+						./assets/images/gallery/entreprise/small/mateus-campos-felipe-Fsgzm8N0hIY-unsplash-small-360x220.jpg 320w
 					"
+					sizes="100 vw"
 					loading="lazy"
 					decoding="async"
 					class="gallery-item column"	
@@ -328,6 +366,8 @@
 			<figcaption class="quote__author">- Richard Avedon</figcaption>
 		</figure>
 	</div>
+</main>
+<footer>
 	<div id="contact">
 		<div class="container">
 			<div class="form-container">
@@ -347,25 +387,46 @@
 				<!--<img data-src="./assets/images/camera.jpg" class="" alt="Photo d'une camera">-->
 				<img 
 					width="425"
-					src="./assets/images/hors-galery/xxl/camera-xxl-medium-425x424.webp"
+					height="424"
+					src="./assets/images/hors-galery/xxl/camera-xxl-medium-425x424.png"
 					srcset="
-						./assets/images/hors-galery/large/camera-large-385x384.webp 1000w,
-						./assets/images/hors-galery/xxl/camera-xxl-medium-425x424.webp 640w,
-						./assets/images/hors-galery/small/camera-small-202x202.webp 320w
+						./assets/images/hors-galery/large/camera-large-385x384.png 385w,
+						./assets/images/hors-galery/xxl/camera-xxl-medium-425x424.png 425w,
+						./assets/images/hors-galery/small/camera-small-202x202.png 202w
 					"
+					sizes="100 vw"
 					loading="lazy"
 					decoding="async"
 					class=""	
-					 alt="photo d'un appareil photo"
+					alt="photo d'un appareil photo"
 				>
 			</div>
 		</div>
 	</div>
-	<!--<script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script defer src="./assets/bootstrap/bootstrap.bundle.js"></script>	
-	<script defer src="./assets/maugallery.js"></script>
-	<script defer src="./assets/scripts.js"></script>-->
-	<script src="./assets/gallery.js"></script>
-
+	<div itemscope itemtype="https://schema.org/Person">
+		<span itemprop="name">Nina Carducci</span>
+		<div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+		  <span itemprop="streetAddress">68 avenue Alsace-Lorraine</span>,
+		  <span itemprop="addressLocality">Bordeaux</span>,
+		  <span itemprop="postalCode">33200</span>,
+		  <span itemprop="addressCountry">France</span>
+		</div>
+		<span itemprop="telephone">05 56 67 78 89</span>
+		<div itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification">
+			<div>
+			  Jours d'ouverture :
+			  <ul>
+				<li itemprop="dayOfWeek" content="Monday">Lundi</li>
+				<li itemprop="dayOfWeek" content="Tuesday">Mardi</li>
+				<li itemprop="dayOfWeek" content="Wednesday">Mercredi</li>
+				<li itemprop="dayOfWeek" content="Thursday">Jeudi</li>
+				<li itemprop="dayOfWeek" content="Friday">Vendredi</li>
+			  </ul>
+			</div>
+			De <span itemprop="opens" content="10:00">10:00</span> à <span itemprop="closes" content="19:00">19:00</span>
+		</div>
+	</div>
+</footer>
+	<script src="./assets/gallery.min.js"></script>
 </body>
 </html>

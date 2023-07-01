@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
       currentSlideIndex = index;
     });
   });
- /**fonction pour ajuster les images en fonction de la taille de la fenetre */ 
+ /**fonction pour ajuster les images en fonction de la taille de la fenetre */
   function adjustImageHeight() {
     const galleryItems = document.querySelectorAll(".gallery-item");
     const windowWidth = window.innerWidth;
@@ -182,6 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   window.addEventListener("resize", adjustImageHeight);
-
   
+
+
 });
