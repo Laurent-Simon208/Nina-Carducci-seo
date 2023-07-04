@@ -117,62 +117,94 @@ document.addEventListener("DOMContentLoaded", function () {
       closeModal();
     }
   });
-  /**déclaration constantes pour les images du carousel */
+
   const carouselElement = document.querySelector("#carouselExampleIndicators");
   const slides = carouselElement.querySelectorAll(".carousel-item");
   let currentSlideIndex = 0;
-  /**défilement automatique des images */
-  function autoScrollCarousel() {
-    slides[currentSlideIndex].classList.remove("active");
-    indicators[currentSlideIndex].classList.remove("active");
-    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-    slides[currentSlideIndex].classList.add("active");
-    indicators[currentSlideIndex].classList.add("active");
-  }
-
+  
   let interval = 5000; // 5 secondes
   let autoScrollInterval = setInterval(autoScrollCarousel, interval);
-  /**déclaration des constantes pour défiler manuellement les images */
+  
   const prevCarouselButton = document.querySelector(".carousel-control-prev");
   const nextCarouselButton = document.querySelector(".carousel-control-next");
-  /**fonction pour aller à l'image suivante */
+  const indicators = document.querySelectorAll(".carousel-indicators button");
+  
+  function moveCarousel(direction) {
+    const currentSlide = slides[currentSlideIndex];
+    const nextSlideIndex = direction === "next" ? (currentSlideIndex + 1) % slides.length : (currentSlideIndex - 1 + slides.length) % slides.length;
+    const nextSlide = slides[nextSlideIndex];
+  
+    currentSlide.style.transition = "transform 0.5s ease-in-out";
+    currentSlide.style.transform = direction === "next" ? "translate3d(-100%, 0, 0)" : "translate3d(100%, 0, 0)";
+  
+    nextSlide.style.transition = "none";
+    nextSlide.style.transform = direction === "next" ? "translate3d(calc(100% + 1px), 0, 0)" : "translate3d(calc(-100% - 1px), 0, 0)";
+    nextSlide.style.opacity = "1";
+  
+    setTimeout(function () {
+      currentSlide.classList.remove("active");
+      indicators[currentSlideIndex].classList.remove("active");
+  
+      nextSlide.classList.add("active");
+      indicators[nextSlideIndex].classList.add("active");
+  
+      nextSlide.style.transition = "transform 0.5s ease-in-out";
+      nextSlide.style.transform = "translate3d(0, 0, 0)";
+      nextSlide.style.opacity = "1";
+  
+      currentSlideIndex = nextSlideIndex;
+    }, 50); // Ajoutez un léger délai pour permettre la mise à jour des styles
+  
+    clearInterval(autoScrollInterval);
+    autoScrollInterval = setInterval(autoScrollCarousel, interval);
+  }
+  
+  function autoScrollCarousel() {
+    moveCarousel("next");
+  }
+  
   function prevSlide() {
-    slides[currentSlideIndex].classList.remove("active");
-    indicators[currentSlideIndex].classList.remove("active");
-    currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-    slides[currentSlideIndex].classList.add("active");
-    indicators[currentSlideIndex].classList.add("active");
+    moveCarousel("prev");
   }
-  /**fonction pour aller à l'image précédente */
+  
   function nextSlide() {
-    slides[currentSlideIndex].classList.remove("active");
-    indicators[currentSlideIndex].classList.remove("active");
-    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-    slides[currentSlideIndex].classList.add("active");
-    indicators[currentSlideIndex].classList.add("active");
+    moveCarousel("next");
   }
-  /**evenement sur les boutons suivant et précedent  */
+  
   prevCarouselButton.addEventListener("click", prevSlide);
   nextCarouselButton.addEventListener("click", nextSlide);
-  /**déclaration des boutons indicateur d'images */
-  const indicators = document.querySelectorAll(".carousel-indicators button");
-  const carouselItems = document.querySelectorAll(".carousel-item");
-
+  
   indicators.forEach((indicator, index) => {
     indicator.addEventListener("click", function () {
-      indicators.forEach((indicator) => {
-        indicator.classList.remove("active");
-      });
-
-      carouselItems.forEach((item) => {
-        item.classList.remove("active");
-      });
-
-      this.classList.add("active");
-      carouselItems[index].classList.add("active");
-      currentSlideIndex = index;
+      const currentSlide = slides[currentSlideIndex];
+      const nextSlide = slides[index];
+  
+      currentSlide.style.transition = "transform 0.5s ease-in-out";
+      currentSlide.style.transform = index > currentSlideIndex ? "translate3d(-100%, 0, 0)" : "translate3d(100%, 0, 0)";
+  
+      nextSlide.style.transition = "none";
+      nextSlide.style.transform = index > currentSlideIndex ? "translate3d(calc(100% + 1px), 0, 0)" : "translate3d(calc(-100% - 1px), 0, 0)";
+      nextSlide.style.opacity = "1";
+  
+      setTimeout(function () {
+        currentSlide.classList.remove("active");
+        indicators[currentSlideIndex].classList.remove("active");
+  
+        nextSlide.classList.add("active");
+        indicators[index].classList.add("active");
+  
+        nextSlide.style.transition = "transform 0.5s ease-in-out";
+        nextSlide.style.transform = "translate3d(0, 0, 0)";
+        nextSlide.style.opacity = "1";
+  
+        currentSlideIndex = index;
+      }, 50); // Ajoutez un léger délai pour permettre la mise à jour des styles
+  
+      clearInterval(autoScrollInterval);
+      autoScrollInterval = setInterval(autoScrollCarousel, interval);
     });
   });
+  
   /**fonction pour ajuster les images en fonction de la taille de la fenetre */
   function adjustImageHeight() {
     const galleryItems = document.querySelectorAll(".gallery-item");
