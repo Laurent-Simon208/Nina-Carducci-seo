@@ -137,11 +137,12 @@ body {
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.5);
   }
-.modal-content {
+.modal-cont {
 	display: block;
 	max-width: 466px;
 	height: auto;
 	border: white solid 15px;
+	border-radius: 0.3rem;
 } 
 .caption {
 	color: #fff;
