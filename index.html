@@ -24,14 +24,21 @@
 	<script type="application/ld+json">
 		{
 		  "@context": "https://schema.org",
-		  "@type": "Photograph",
+		  "@type": ["LocalBusiness", "Service"],
 		  "name": "Nina Carducci",
+		  "jubtTitle": "Photographe freelance",
+		  "description": "Nina Carducci, photographe professionnelle",
 		  "address": {
 			"@type": "PostalAddress",
 			"streetAddress": "68 avenue Alsace-Lorraine",
 			"addressLocality": "Bordeaux",
 			"postalCode": "33200",
 			"addressCountry": "France"
+		  },
+		  "geo": {
+			"@type": "GeoCoordinates",
+			"latitude": "44.846805572509766",
+			"longitude": "-0.6071873307228088"
 		  },
 		  "telephone": "05 56 67 78 89",
 		  "openingHoursSpecification": {
@@ -45,7 +52,8 @@
 			],
 			"opens": "10:00",
 			"closes": "19:00"
-		  }
+		  },
+		  "priceRange": "50€ - 400€"
 		}
 		</script>
 	<link rel="stylesheet" href="./assets/style.min.css">
@@ -324,16 +332,18 @@
 				</div>
 			</div>
 		</div>
-		<div class="contact-snippet" itemscope itemtype="https://schema.org/Photograph">
-			<div itemscope itemtype="https://schema.org/Person" >
-				<h5><span itemprop="name">Nina Carducci</span></h5>
-				<div itemscope itemtype="https://schema.org/PostalAddress">
-					<span itemprop="streetAddress">68 avenue Alsace-Lorraine</span>,
-					<span itemprop="addressLocality">Bordeaux</span>,
-					<span itemprop="postalCode">33200</span>,
-					<span itemprop="addressCountry">France</span>
+		<div class="contact-snippet" itemscope @type="https://schema.org/Photograph">
+			<div itemscope itemtype="https://schema.org/Service" >
+				<h5><span itemprop="name" >Nina Carducci</span></h5>
+				<div itemscope itemtype="https://schema.org/LocalBusiness">
+					<span itemprop="name" style="display: none;">Nina Carducci</span><br>
+					<span itemprop="streetAddress">68 avenue Alsace-Lorraine</span><br>
+					<span itemprop="addressLocality">Bordeaux</span><br>
+					<span itemprop="postalCode">33200</span>
+					<span itemprop="addressCountry">France</span><br>
+					<span itemprop="telephone">05 56 67 78 89</span><br>
+					<span itemprop="priceRange" style="display: none;">50€-400€</span>
 				</div>
-				<span itemprop="telephone">05 56 67 78 89</span>
 			</div>
 			<div itemprop="OpeningHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification">
 				<div>
@@ -345,9 +355,9 @@
 						<li itemprop="dayOfWeek" content="Thursday">Jeudi</li>
 						<li itemprop="dayOfWeek" content="Friday">Vendredi</li>
 					</ul>
-				</div>
-				De <span itemprop="opens" content="10:00">10:00</span> à <span itemprop="closes"
+					De <span itemprop="opens" content="10:00">10:00</span> à <span itemprop="closes"
 					content="19:00">19:00</span>
+				</div>
 			</div>
 		</div>
 		</div>
